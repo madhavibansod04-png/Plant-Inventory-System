@@ -1,5 +1,9 @@
 package com.plantInventory.app.repository;
 
-public class PlantRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.plantInventory.app.model.Plant;
+
+public interface PlantRepository extends JpaRepository<Plant, Integer>{
 
 }
