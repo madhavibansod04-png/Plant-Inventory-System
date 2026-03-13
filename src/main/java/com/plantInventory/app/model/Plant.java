@@ -1,5 +1,6 @@
 package com.plantInventory.app.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class Plant {
 	//attribute
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int plantId;
+	private Long plantId;
 	
 	private String commonName;
 	
@@ -38,13 +39,13 @@ public class Plant {
 	
 	private int minThreshold;
 	
-	private int purchasePrice;
+	private BigDecimal purchasePrice;
 	
-	private int sellPrice;
+	private BigDecimal sellPrice;
 	
 	private String location;
 	
-	private String tags;
+	private List<String> tags;
 	
 	private boolean active;
 	
@@ -64,9 +65,9 @@ public class Plant {
 	public Plant() {}
 	
 	//field constructor
-	public Plant(int plantId, String commonName, String scientificName, String category,
-			int stockQuantity, int minThreshold, int purchasePrice, int sellPrice, String location, 
-			String tags, boolean active, LocalDateTime createdAt, LocalDateTime updatedAt ) {
+	public Plant(Long plantId, String commonName, String scientificName, String category,
+			int stockQuantity, int minThreshold, BigDecimal purchasePrice, BigDecimal sellPrice, String location, 
+			List<String> tags, boolean active, LocalDateTime createdAt, LocalDateTime updatedAt ) {
 		
 		this.plantId = plantId;
 		this.commonName = commonName;
@@ -85,11 +86,11 @@ public class Plant {
 
 	//getter and setter
 	
-	public int getPlantId() {
+	public Long getPlantId() {
 		return plantId;
 	}
 
-	public void setPlantId(int plantId) {
+	public void setPlantId(Long plantId) {
 		this.plantId = plantId;
 	}
 
@@ -133,20 +134,20 @@ public class Plant {
 		this.minThreshold = minThreshold;
 	}
 
-	public int getPurchasePrice() {
+	public BigDecimal getPurchasePrice() {
 		return purchasePrice;
 	}
 
-	public void setPurchasePrice(int purchasePrice) {
-		this.purchasePrice = purchasePrice;
+	public void setPurchasePrice(BigDecimal bigDecimal) {
+		this.purchasePrice = bigDecimal;
 	}
 
-	public int getSellPrice() {
+	public BigDecimal getSellPrice() {
 		return sellPrice;
 	}
 
-	public void setSellPrice(int sellPrice) {
-		this.sellPrice = sellPrice;
+	public void setSellPrice(BigDecimal bigDecimal) {
+		this.sellPrice = bigDecimal;
 	}
 
 	public String getLocation() {
@@ -157,12 +158,12 @@ public class Plant {
 		this.location = location;
 	}
 
-	public String getTags() {
+	public List<String> getTags() {
 		return tags;
 	}
 
-	public void setTags(String tags) {
-		this.tags = tags;
+	public void setTags(List<String> list) {
+		this.tags = list;
 	}
 
 	public boolean isActive() {
