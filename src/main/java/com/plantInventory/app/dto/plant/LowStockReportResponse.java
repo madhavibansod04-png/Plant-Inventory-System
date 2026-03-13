@@ -10,7 +10,7 @@ public class LowStockReportResponse {
 	private String plantName;
 	private Integer stockQuantity;
 	private Integer threshold;
-	private Long daysSienceLastPurchase;
+	private Long daysSinceLastPurchase;
 	
 	
 	//constructor --> no-args
@@ -18,11 +18,11 @@ public class LowStockReportResponse {
 	
 	//constructor --> all args
 	public LowStockReportResponse(String plantName, Integer stockQuantity, 
-			Integer threshold, Long daysSienceLastPurchase) {
+			Integer threshold, Long daysSinceLastPurchase) {
 		this.plantName = plantName;
 		this.stockQuantity = stockQuantity;
 		this.threshold = threshold;
-		this.daysSienceLastPurchase = daysSienceLastPurchase;
+		this.daysSinceLastPurchase = daysSinceLastPurchase;
 	}
 
 	//getter and setter
@@ -51,12 +51,12 @@ public class LowStockReportResponse {
 		this.threshold = threshold;
 	}
 
-	public Long getDaysSienceLastPurchase() {
-		return daysSienceLastPurchase;
+	public Long getDaysSinceLastPurchase() {
+		return daysSinceLastPurchase;
 	}
 
-	public void setDaysSienceLastPurchase(Long daysSienceLastPurchase) {
-		this.daysSienceLastPurchase = daysSienceLastPurchase;
+	public void setDaysSinceLastPurchase(Long daysSinceLastPurchase) {
+		this.daysSinceLastPurchase = daysSinceLastPurchase;
 	}
 	
 }
